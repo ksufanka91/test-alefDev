@@ -1,0 +1,62 @@
+.product {
+
+    &-info {
+
+    }
+
+    &-code {
+        font-size: 0.8571rem;
+        color: $color-light;
+        margin-bottom: 1.2857rem;
+    }
+
+    &-reviews {
+        position: relative;
+        margin-bottom: 3.21rem;
+
+        &-item {
+
+        }
+
+        &-title {
+            margin-right: 0.9286rem;
+        }
+
+        &-rating {
+            margin-right: 0.3571rem;
+        }
+
+        &:after {
+            content: url("/images/product-arrow.svg");
+            margin-top: 0.21rem;
+            margin-left: 1.42rem;
+        }
+    }
+
+    &-price {
+        margin-bottom: 2.5rem;
+
+        &-current {
+            font-weight: 700;
+            font-size: 1.7143rem;
+            margin-right: 0.8571rem;
+        }
+
+        &-prev {
+            text-decoration: line-through;
+        }
+    }
+
+    &-discount {
+
+        &-item {
+            padding: 0.28rem 0.57rem;
+            margin-right: 0.7143rem;
+            border: 1px solid $color-brand;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
