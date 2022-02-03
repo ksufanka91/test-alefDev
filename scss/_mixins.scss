@@ -1,0 +1,6 @@
+@mixin media-to($to) {
+    @media (max-width: $to) {
+        @content;
+    }
+}
+
