@@ -1,0 +1,42 @@
+.gallery {
+    margin-bottom: 10.14rem;
+    &-link-box {
+        text-align: center;
+        margin-bottom: 1.78rem;
+    }
+
+    &-link {
+        display: inline-block;
+        vertical-align: baseline;
+        line-height: 0.95;
+        border-bottom: 1px solid $color-light;
+    }
+    .columns {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .column {
+        width: calc(50% - 8px);
+    }
+
+    .column-4 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .gallery-box {
+            width: calc(50% - 8px);
+            margin-bottom: 16px;
+        }
+    }
+
+    &-box {
+        display: block;
+
+        &-image {
+            display: block;
+            max-width: 100%;
+        }
+    }
+}

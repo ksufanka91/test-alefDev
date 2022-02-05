@@ -1,7 +1,38 @@
 .product {
+    position: relative;
+    justify-content: space-between;
+    margin-bottom: 1.78rem;
+
+    &-title {
+        letter-spacing: 0;
+    }
+
+    &-slider {
+        width: calc(50% - 8px);
+    }
 
     &-info {
+        padding-top: 0.92rem;
+        width: calc(50% - 28px);
+    }
 
+    &-main-slider {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-thumbnail-slider {
+        position: absolute;
+        top: 26px;
+        left: 24px;
+        z-index: 1;
+
+        .splide__slide {
+            border: none !important;
+        }
     }
 
     &-code {
@@ -13,10 +44,6 @@
     &-reviews {
         position: relative;
         margin-bottom: 3.21rem;
-
-        &-item {
-
-        }
 
         &-title {
             margin-right: 0.9286rem;
@@ -45,9 +72,16 @@
         &-prev {
             text-decoration: line-through;
         }
+
+        &:after {
+            content: url("/images/product-arrow.svg");
+            margin-top: 0.21rem;
+            margin-left: 1.42rem;
+        }
     }
 
     &-discount {
+        margin-bottom: 2.5rem;
 
         &-item {
             padding: 0.28rem 0.57rem;
@@ -57,6 +91,102 @@
             &:last-child {
                 margin-right: 0;
             }
+        }
+    }
+
+    &-size {
+        display: inline-flex;
+        flex-direction: column;
+
+        &-choose {
+            appearance: none;
+            min-width: 315px;
+            padding: 0.85rem 1.14rem;
+            background: transparent url("../images/product-arrow-down.svg") no-repeat calc(100% - 10px) center;
+            margin-bottom: 0.85rem;
+            cursor: pointer;
+        }
+
+        &-link {
+            margin-bottom: 2.92rem;
+            display: inline-block;
+            vertical-align: baseline;
+            line-height: 0.95;
+            border-bottom: 1px solid $color-light;
+        }
+    }
+
+    &-add-to-cart {
+        margin-bottom: 1.71rem;
+        padding-bottom: 2.07rem;
+        border-bottom: 1px solid #C4C4C4;
+    }
+
+    &-form {
+        margin-bottom: 0.85rem;
+
+        &-buttons {
+            height: 44px;
+            margin-right: 0.85rem;
+        }
+    }
+
+    &-btn-submit {
+        margin-right: 0.28rem;
+    }
+
+    &-btn-quantity {
+        width: 44px;
+        height: 100%;
+        background: #f2f2f2;
+        border: none;
+        cursor: pointer;
+    }
+
+    &-btn-count {
+        min-width: 57px;
+        height: 100%;
+        background: #f2f2f2;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 44px;
+    }
+
+    &-buy {
+        display: inline-block;
+        vertical-align: baseline;
+        line-height: 0.95;
+        border-bottom: 1px solid $color-light;
+    }
+
+    &-favourites {
+        width: 44px;
+        height: 44px;
+        padding: 1.07rem;
+        background-color: $color-brand;
+
+        &:hover {
+            background-color: #0f0e0e;
+        }
+    }
+
+    &-links {
+        &-item {
+            display: flex;
+            margin-bottom: 0.85rem;
+        }
+
+        &-image {
+            width: 15px;
+            height: 15px;
+            margin-right: 0.35rem;
+        }
+
+        &-text {
+            display: inline-block;
+            vertical-align: baseline;
+            line-height: 0.95;
+            border-bottom: 1px solid $color-light;
         }
     }
 }

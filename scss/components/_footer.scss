@@ -1,0 +1,50 @@
+.footer {
+    &-columns {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .button {
+        display: block;
+    }
+
+    &-item {
+        margin-bottom: 0.57rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &-subscribe {
+        &-title {
+            margin-bottom: 3.21rem;
+        }
+
+        &-email {
+
+            width: 100%;
+            border: none;
+            padding: 0 0 0.85rem 0.85rem;
+            border-bottom: 1px solid #c4c4c4;
+            margin-bottom: 2.5rem;
+        }
+
+        &-btn-cross {
+            position: absolute;
+            right: 0;
+            top: 3px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    .form {
+        position: relative;
+    }
+
+    .button {
+        margin-left: auto;
+    }
+}
