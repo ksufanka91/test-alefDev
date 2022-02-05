@@ -1,10 +1,11 @@
 .product {
     position: relative;
     justify-content: space-between;
-    margin-bottom: 1.78rem;
+    margin-bottom: 30px;
 
     &-title {
         letter-spacing: 0;
+        margin-bottom: 0.57rem;
     }
 
     &-slider {
@@ -38,12 +39,12 @@
     &-code {
         font-size: 0.8571rem;
         color: $color-light;
-        margin-bottom: 1.2857rem;
+        margin-bottom: 1.14rem;
     }
 
     &-reviews {
         position: relative;
-        margin-bottom: 3.21rem;
+        margin-bottom: 3.07rem;
 
         &-title {
             margin-right: 0.9286rem;
@@ -55,13 +56,13 @@
 
         &:after {
             content: url("/images/product-arrow.svg");
-            margin-top: 0.21rem;
-            margin-left: 1.42rem;
+            margin-top: 0.07rem;
+            margin-left: 0.35rem;
         }
     }
 
     &-price {
-        margin-bottom: 2.5rem;
+        margin-bottom: 1.07rem;
 
         &-current {
             font-weight: 700;
@@ -81,11 +82,12 @@
     }
 
     &-discount {
-        margin-bottom: 2.5rem;
+        font-size: 0.85rem;
+        margin-bottom: 2.35rem;
 
         &-item {
-            padding: 0.28rem 0.57rem;
-            margin-right: 0.7143rem;
+            padding: 4px 7px 2px;
+            margin-right: 0.35rem;
             border: 1px solid $color-brand;
 
             &:last-child {
@@ -101,7 +103,7 @@
         &-choose {
             appearance: none;
             min-width: 315px;
-            padding: 0.85rem 1.14rem;
+            padding: 0.92rem 1.14rem;
             background: transparent url("../images/product-arrow-down.svg") no-repeat calc(100% - 10px) center;
             margin-bottom: 0.85rem;
             cursor: pointer;
@@ -117,7 +119,7 @@
     }
 
     &-add-to-cart {
-        margin-bottom: 1.71rem;
+        margin-bottom: 1.92rem;
         padding-bottom: 2.07rem;
         border-bottom: 1px solid #C4C4C4;
     }
@@ -173,13 +175,14 @@
     &-links {
         &-item {
             display: flex;
-            margin-bottom: 0.85rem;
+            margin-bottom: 1.21rem;
+            margin-left: 0.21rem;
         }
 
         &-image {
             width: 15px;
             height: 15px;
-            margin-right: 0.35rem;
+            margin-right: 0.42rem;
         }
 
         &-text {

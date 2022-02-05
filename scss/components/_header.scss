@@ -1,5 +1,5 @@
 .header {
-    padding: 0.71rem 0;
+    padding: 11px 0 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 1.78rem;
 
@@ -13,8 +13,13 @@
         font-size: 1.5714rem;
     }
 
-    &-item {
-        margin-right: 2.5rem;
+    &-buttons {
+        display: flex;
+        padding-right: 7px;
+    }
+
+    &-button {
+        margin-right: 2.3rem;
 
         &:last-child {
             margin-right: 0;

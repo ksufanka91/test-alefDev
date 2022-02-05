@@ -44,8 +44,7 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -82,8 +81,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -189,9 +187,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -199,9 +197,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -210,9 +208,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -230,8 +228,7 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -263,10 +260,9 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -275,8 +271,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -284,7 +280,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -294,7 +290,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -352,14 +348,10 @@ body {
   line-height: 1.4286rem;
   letter-spacing: 0.5px;
   font-weight: 400;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding-bottom: 200px;
+  box-sizing: border-box;
 }
-
 body * {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 .container {
@@ -379,17 +371,14 @@ body * {
   text-decoration: none;
   cursor: pointer;
 }
-
 .button:hover {
   background-color: #0f0e0e;
 }
-
 .button-outline {
   color: #333333;
   background-color: transparent;
   padding: 0.5714rem 2rem;
 }
-
 .button-outline:hover {
   background-color: #f0f0f0;
 }
@@ -398,7 +387,6 @@ a {
   text-decoration: none;
   color: #333333;
 }
-
 a:hover {
   color: #000000;
 }
@@ -414,159 +402,123 @@ h2 {
 }
 
 .d-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .header {
-  padding: 0.71rem 0;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 11px 0 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 1.78rem;
 }
-
 .header-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .header-logo {
   font-weight: 700;
   font-size: 1.5714rem;
 }
-
-.header-item {
-  margin-right: 2.5rem;
+.header-buttons {
+  display: flex;
+  padding-right: 7px;
 }
-
-.header-item:last-child {
+.header-button {
+  margin-right: 2.3rem;
+}
+.header-button:last-child {
   margin-right: 0;
 }
 
 .product {
   position: relative;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 1.78rem;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
-
 .product-title {
   letter-spacing: 0;
+  margin-bottom: 0.57rem;
 }
-
 .product-slider {
   width: calc(50% - 8px);
 }
-
 .product-info {
   padding-top: 0.92rem;
   width: calc(50% - 28px);
 }
-
 .product-main-slider img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
-
 .product-thumbnail-slider {
   position: absolute;
   top: 26px;
   left: 24px;
   z-index: 1;
 }
-
 .product-thumbnail-slider .splide__slide {
   border: none !important;
 }
-
 .product-code {
   font-size: 0.8571rem;
   color: #828282;
-  margin-bottom: 1.2857rem;
+  margin-bottom: 1.14rem;
 }
-
 .product-reviews {
   position: relative;
-  margin-bottom: 3.21rem;
+  margin-bottom: 3.07rem;
 }
-
 .product-reviews-title {
   margin-right: 0.9286rem;
 }
-
 .product-reviews-rating {
   margin-right: 0.3571rem;
 }
-
 .product-reviews:after {
   content: url("/images/product-arrow.svg");
-  margin-top: 0.21rem;
-  margin-left: 1.42rem;
+  margin-top: 0.07rem;
+  margin-left: 0.35rem;
 }
-
 .product-price {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.07rem;
 }
-
 .product-price-current {
   font-weight: 700;
   font-size: 1.7143rem;
   margin-right: 0.8571rem;
 }
-
 .product-price-prev {
   text-decoration: line-through;
 }
-
 .product-price:after {
   content: url("/images/product-arrow.svg");
   margin-top: 0.21rem;
   margin-left: 1.42rem;
 }
-
 .product-discount {
-  margin-bottom: 2.5rem;
+  font-size: 0.85rem;
+  margin-bottom: 2.35rem;
 }
-
 .product-discount-item {
-  padding: 0.28rem 0.57rem;
-  margin-right: 0.7143rem;
+  padding: 4px 7px 2px;
+  margin-right: 0.35rem;
   border: 1px solid #333333;
 }
-
 .product-discount-item:last-child {
   margin-right: 0;
 }
-
 .product-size {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 .product-size-choose {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   min-width: 315px;
-  padding: 0.85rem 1.14rem;
+  padding: 0.92rem 1.14rem;
   background: transparent url("../images/product-arrow-down.svg") no-repeat calc(100% - 10px) center;
   margin-bottom: 0.85rem;
   cursor: pointer;
 }
-
 .product-size-link {
   margin-bottom: 2.92rem;
   display: inline-block;
@@ -574,26 +526,21 @@ h2 {
   line-height: 0.95;
   border-bottom: 1px solid #828282;
 }
-
 .product-add-to-cart {
-  margin-bottom: 1.71rem;
+  margin-bottom: 1.92rem;
   padding-bottom: 2.07rem;
   border-bottom: 1px solid #C4C4C4;
 }
-
 .product-form {
   margin-bottom: 0.85rem;
 }
-
 .product-form-buttons {
   height: 44px;
   margin-right: 0.85rem;
 }
-
 .product-btn-submit {
   margin-right: 0.28rem;
 }
-
 .product-btn-quantity {
   width: 44px;
   height: 100%;
@@ -601,7 +548,6 @@ h2 {
   border: none;
   cursor: pointer;
 }
-
 .product-btn-count {
   min-width: 57px;
   height: 100%;
@@ -610,38 +556,31 @@ h2 {
   vertical-align: middle;
   line-height: 44px;
 }
-
 .product-buy {
   display: inline-block;
   vertical-align: baseline;
   line-height: 0.95;
   border-bottom: 1px solid #828282;
 }
-
 .product-favourites {
   width: 44px;
   height: 44px;
   padding: 1.07rem;
   background-color: #333333;
 }
-
 .product-favourites:hover {
   background-color: #0f0e0e;
 }
-
 .product-links-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  margin-bottom: 0.85rem;
+  margin-bottom: 1.21rem;
+  margin-left: 0.21rem;
 }
-
 .product-links-image {
   width: 15px;
   height: 15px;
-  margin-right: 0.35rem;
+  margin-right: 0.42rem;
 }
-
 .product-links-text {
   display: inline-block;
   vertical-align: baseline;
@@ -650,105 +589,109 @@ h2 {
 }
 
 .gallery {
-  margin-bottom: 10.14rem;
+  margin-bottom: 108px;
 }
-
 .gallery-link-box {
   text-align: center;
   margin-bottom: 1.78rem;
 }
-
 .gallery-link {
   display: inline-block;
   vertical-align: baseline;
   line-height: 0.95;
   border-bottom: 1px solid #828282;
 }
-
-.gallery .columns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.gallery-link-box {
+  margin-bottom: 2.28rem;
 }
-
+.gallery .columns {
+  display: flex;
+  justify-content: space-between;
+}
 .gallery .column {
   width: calc(50% - 8px);
 }
-
 .gallery .column-4 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-
 .gallery .column-4 .gallery-box {
   width: calc(50% - 8px);
   margin-bottom: 16px;
 }
-
 .gallery-box {
   display: block;
 }
-
 .gallery-box-image {
   display: block;
   max-width: 100%;
 }
 
+.footer {
+  padding: 20px 0 70px;
+}
 .footer-columns {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
-
-.footer .button {
-  display: block;
+.footer-column {
+  display: flex;
+  width: calc(50% - 8px);
 }
-
+.footer-column-left {
+  justify-content: space-around;
+}
+.footer-column-right {
+  justify-content: center;
+}
+.footer-title {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
 .footer-item {
   margin-bottom: 0.57rem;
 }
-
 .footer-item:last-child {
   margin-bottom: 0;
 }
-
-.footer-subscribe-title {
-  margin-bottom: 3.21rem;
+.footer-item-box {
+  display: flex;
+  flex-direction: column;
+  min-width: 110px;
 }
-
+.footer-subscribe {
+  width: 100%;
+  max-width: 452px;
+}
+.footer-subscribe-title {
+  margin-top: 0;
+  margin-bottom: 37px;
+  letter-spacing: 0.1px;
+}
 .footer-subscribe-email {
   width: 100%;
   border: none;
-  padding: 0 0 0.85rem 0.85rem;
+  padding: 0.85rem 20px;
   border-bottom: 1px solid #c4c4c4;
   margin-bottom: 2.5rem;
+  outline: none;
 }
-
 .footer-subscribe-btn-cross {
   position: absolute;
-  right: 0;
-  top: 3px;
+  right: 2px;
+  top: 8px;
+  padding: 0.3rem;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
-
-.footer .form {
+.footer-subscribe .form {
   position: relative;
 }
-
-.footer .button {
+.footer-subscribe .button {
+  display: block;
   margin-left: auto;
 }
+
 /*# sourceMappingURL=styles.css.map */

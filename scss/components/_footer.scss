@@ -1,11 +1,27 @@
 .footer {
+    padding: 20px 0 70px;
+
     &-columns {
         display: flex;
         justify-content: space-around;
     }
 
-    .button {
-        display: block;
+    &-column {
+        display: flex;
+        width: calc(50% - 8px);
+
+        &-left {
+            justify-content: space-around;
+        }
+
+        &-right {
+            justify-content: center;
+        }
+    }
+
+    &-title {
+        margin-top: 0;
+        margin-bottom: 18px;
     }
 
     &-item {
@@ -14,37 +30,50 @@
         &:last-child {
             margin-bottom: 0;
         }
+
+        &-box {
+            display: flex;
+            flex-direction: column;
+            min-width: 110px;
+        }
     }
 
     &-subscribe {
+        width: 100%;
+        max-width: 452px;
+
         &-title {
-            margin-bottom: 3.21rem;
+            margin-top: 0;
+            margin-bottom: 37px;
+            letter-spacing: 0.1px;
         }
 
         &-email {
-
             width: 100%;
             border: none;
-            padding: 0 0 0.85rem 0.85rem;
+            padding: 0.85rem 20px;
             border-bottom: 1px solid #c4c4c4;
             margin-bottom: 2.5rem;
+            outline: none;
         }
 
         &-btn-cross {
             position: absolute;
-            right: 0;
-            top: 3px;
+            right: 2px;
+            top: 8px;
+            padding: 0.3rem;
             background-color: transparent;
             border: none;
             cursor: pointer;
         }
-    }
 
-    .form {
-        position: relative;
-    }
+        .form {
+            position: relative;
+        }
 
-    .button {
-        margin-left: auto;
+        .button {
+            display: block;
+            margin-left: auto;
+        }
     }
 }

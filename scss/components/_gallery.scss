@@ -1,5 +1,6 @@
 .gallery {
-    margin-bottom: 10.14rem;
+    margin-bottom: 108px;
+
     &-link-box {
         text-align: center;
         margin-bottom: 1.78rem;
@@ -10,6 +11,10 @@
         vertical-align: baseline;
         line-height: 0.95;
         border-bottom: 1px solid $color-light;
+
+        &-box {
+            margin-bottom: 2.28rem;
+        }
     }
     .columns {
         display: flex;

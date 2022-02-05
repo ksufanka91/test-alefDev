@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     pagination: false,
     arrows: false,
     width: '100%',
-    heightRatio: 1.3,
+    heightRatio: 1.28,
   });
 
   var thumbnails = new Splide('#thumbnail-slider', {
