@@ -1,9 +1,17 @@
 .gallery {
     margin-bottom: 108px;
 
+    @include media-to(768px) {
+        margin-bottom: 42px;
+    }
+
     &-link-box {
         text-align: center;
         margin-bottom: 1.78rem;
+
+        @include media-to(768px) {
+            margin-bottom: 4.14rem;
+        }
     }
 
     &-link {
@@ -11,18 +19,25 @@
         vertical-align: baseline;
         line-height: 0.95;
         border-bottom: 1px solid $color-light;
-
-        &-box {
-            margin-bottom: 2.28rem;
-        }
     }
+
     .columns {
         display: flex;
         justify-content: space-between;
+
+        @include media-to(768px) {
+            flex-direction: column;
+        }
     }
 
     .column {
         width: calc(50% - 8px);
+
+
+        @include media-to(768px) {
+            width: auto;
+            margin: 0 -20px;
+        }
     }
 
     .column-4 {
@@ -42,6 +57,20 @@
         &-image {
             display: block;
             max-width: 100%;
+
+            @include media-to(768px) {
+                width: 100%;
+            }
+
+        }
+
+        &-lg {
+
+            @include media-to(768px) {
+                margin-bottom: 1.07rem;
+            }
         }
     }
+
+
 }

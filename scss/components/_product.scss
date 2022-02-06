@@ -1,7 +1,12 @@
 .product {
-    position: relative;
     justify-content: space-between;
     margin-bottom: 30px;
+
+    @include media-to(768px) {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4.14rem;
+    }
 
     &-title {
         letter-spacing: 0;
@@ -9,12 +14,22 @@
     }
 
     &-slider {
+        position: relative;
         width: calc(50% - 8px);
+
+        @include media-to(768px) {
+            width: auto;
+            margin: 0 -20px 24px;
+        }
     }
 
     &-info {
         padding-top: 0.92rem;
         width: calc(50% - 28px);
+
+        @include media-to(768px) {
+            width: 100%;
+        }
     }
 
     &-main-slider {
@@ -97,12 +112,13 @@
     }
 
     &-size {
-        display: inline-flex;
+        display: flex;
         flex-direction: column;
 
         &-choose {
             appearance: none;
-            min-width: 315px;
+            max-width: 315px;
+            width: 100%;
             padding: 0.92rem 1.14rem;
             background: transparent url("../images/product-arrow-down.svg") no-repeat calc(100% - 10px) center;
             margin-bottom: 0.85rem;
@@ -119,22 +135,54 @@
     }
 
     &-add-to-cart {
+        position: relative;
         margin-bottom: 1.92rem;
         padding-bottom: 2.07rem;
-        border-bottom: 1px solid #C4C4C4;
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: calc(100% + 20px);
+            bottom: 0;
+            left: -20px;
+            border: 0.5px solid #C4C4C4;
+
+            @include media-to(768px) {
+                width: calc(100% + 40px);
+            }
+        }
     }
 
     &-form {
         margin-bottom: 0.85rem;
 
+        @include media-to(915px) {
+            align-items: end;
+        }
+
+
+        &-box {
+            @include media-to(915px) {
+                flex-direction: column;
+            }
+        }
+
         &-buttons {
             height: 44px;
             margin-right: 0.85rem;
+
+            @include media-to(915px) {
+                margin-bottom: 1.07rem;
+            }
         }
     }
 
     &-btn-submit {
         margin-right: 0.28rem;
+
+        @include media-to(768px) {
+            height: 44px;
+        }
     }
 
     &-btn-quantity {

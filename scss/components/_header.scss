@@ -3,6 +3,12 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 1.78rem;
 
+    @include media-to(768px) {
+        box-shadow: none;
+        margin-bottom: 0;
+        padding: 22px 0 28px;
+    }
+
     &-menu {
         display: flex;
         justify-content: space-between;
@@ -19,10 +25,15 @@
     }
 
     &-button {
-        margin-right: 2.3rem;
+        margin-left: 2.3rem;
+    }
 
-        &:last-child {
-            margin-right: 0;
+    &-burger {
+        @include media-to(768px) {
+            display: block;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
         }
     }
 }
