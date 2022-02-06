@@ -1,7 +1,13 @@
 .header {
+    position: absolute;
+    //position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 2;
     padding: 11px 0 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1.78rem;
+    background: #fff;
+    transition: 300ms transform;
 
     @include media-to(768px) {
         box-shadow: none;
@@ -9,7 +15,7 @@
         padding: 22px 0 28px;
     }
 
-    &-menu {
+    &-box {
         display: flex;
         justify-content: space-between;
     }
@@ -22,6 +28,10 @@
     &-buttons {
         display: flex;
         padding-right: 7px;
+
+        @include media-to(768px) {
+            padding-right: 0;
+        }
     }
 
     &-button {
@@ -34,6 +44,41 @@
             border: none;
             background-color: transparent;
             cursor: pointer;
+        }
+    }
+
+    &-mobile-menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(-100%);
+        transition: 0.8s transform;
+        width: 100%;
+        padding: 80px 25px 43px 30px;
+        background-color: #fff;
+
+        &.open {
+            transform: translateY(0);
+        }
+
+        &-btn-close {
+            position: absolute;
+            top: 23px;
+            right: 25px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            text-transform: uppercase;
+        }
+
+        &-link {
+            margin-bottom: 30px;
         }
     }
 }

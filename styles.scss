@@ -14,18 +14,33 @@ body {
     letter-spacing: 0.5px;
     font-weight: 400;
     box-sizing: border-box;
+    background: #fff;
 
     * {
         box-sizing: inherit;
     }
+
+    &.header-fixed .header {
+        position: fixed;
+    }
+
+    &.scroll-down .header {
+        transform: translateY(-100%);
+    }
+
+    &.scroll-up .header {
+        transform: none;
+    }
+}
+
+main {
+    padding-top: 66px;
 }
 
 .container {
     max-width: 1428px;
     padding: 0 20px;
     margin: 0 auto;
-
-
 }
 
 .button {
