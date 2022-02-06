@@ -1,3 +1,4 @@
+// slider
 document.addEventListener('DOMContentLoaded', function () {
     var main = new Splide('#main-slider', {
         type: 'fade',
@@ -35,3 +36,24 @@ document.addEventListener('DOMContentLoaded', function () {
     main.mount();
     thumbnails.mount();
 });
+
+// add to cart
+let btnMinus = document.querySelector('.js-btn-minus'),
+    btnPlus = document.querySelector('.js-btn-plus'),
+    quantityField = document.querySelector('.js-btn-count'),
+    inputHidden = document.querySelector('.js-input-hidden');
+
+
+btnMinus.addEventListener('click', function () {
+    if (inputHidden.value > 1) {
+        inputHidden.value--;
+        quantityField.textContent = inputHidden.value;
+    }
+});
+
+btnPlus.addEventListener('click', function () {
+    inputHidden.value++;
+    quantityField.textContent = inputHidden.value;
+});
+
+
