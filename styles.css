@@ -631,9 +631,13 @@ h2 {
   max-width: 315px;
   width: 100%;
   padding: 0.92rem 1.14rem;
+  border: 1px solid #333333;
   background: transparent url("images/product-arrow-down.svg") no-repeat calc(100% - 10px) center;
   margin-bottom: 0.85rem;
   cursor: pointer;
+}
+.product-size-choose-option {
+  color: #333333;
 }
 .product-size-link {
   margin-bottom: 2.92rem;
@@ -707,6 +711,7 @@ h2 {
   background: #f2f2f2;
   border: none;
   cursor: pointer;
+  color: #333333;
 }
 .product-btn-count {
   min-width: 57px;

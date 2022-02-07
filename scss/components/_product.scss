@@ -132,9 +132,15 @@
             max-width: 315px;
             width: 100%;
             padding: 0.92rem 1.14rem;
+            border: 1px solid $color-brand;
             background: transparent url("images/product-arrow-down.svg") no-repeat calc(100% - 10px) center;
             margin-bottom: 0.85rem;
             cursor: pointer;
+
+            &-option {
+                color: $color-brand;
+            }
+
         }
 
         &-link {
@@ -212,6 +218,7 @@
         background: #f2f2f2;
         border: none;
         cursor: pointer;
+        color: $color-brand;
     }
 
     &-btn-count {
