@@ -44,8 +44,7 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -82,8 +81,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -189,9 +187,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -199,9 +197,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -210,9 +208,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -230,8 +228,7 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -263,10 +260,9 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -275,8 +271,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -284,7 +280,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -294,7 +290,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -352,28 +348,20 @@ body {
   line-height: 1.4286rem;
   letter-spacing: 0.5px;
   font-weight: 400;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background: #fff;
 }
-
 body * {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
-
 body.header-fixed .header {
   position: fixed;
 }
-
 body.scroll-down .header {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  transform: translateY(-100%);
 }
-
 body.scroll-up .header {
-  -webkit-transform: none;
-          transform: none;
+  transform: none;
 }
 
 main {
@@ -397,17 +385,14 @@ main {
   text-decoration: none;
   cursor: pointer;
 }
-
 .button:hover {
   background-color: #0f0e0e;
 }
-
 .button-outline {
   color: #333333;
   background-color: transparent;
   padding: 0.5714rem 2rem;
 }
-
 .button-outline:hover {
   background-color: #f0f0f0;
 }
@@ -416,7 +401,6 @@ a {
   text-decoration: none;
   color: #333333;
 }
-
 a:hover {
   color: #000000;
 }
@@ -432,8 +416,6 @@ h2 {
 }
 
 .d-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -447,55 +429,49 @@ h2 {
   right: 0;
   z-index: 2;
   padding: 11px 0 8px;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background: #fff;
-  -webkit-transition: 300ms -webkit-transform;
-  transition: 300ms -webkit-transform;
   transition: 300ms transform;
-  transition: 300ms transform, 300ms -webkit-transform;
 }
-
 @media (max-width: 768px) {
   .header {
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     margin-bottom: 0;
     padding: 22px 0 28px;
   }
 }
-
-.header-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+@media (max-width: 375px) {
+  .header {
+    padding: 22px 0;
+  }
 }
-
+.header-box {
+  display: flex;
+  justify-content: space-between;
+}
 .header-logo {
   font-weight: 700;
   font-size: 1.5714rem;
 }
-
 .header-buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding-right: 7px;
 }
-
 @media (max-width: 768px) {
   .header-buttons {
     padding-right: 0;
   }
 }
-
 .header-button {
   margin-left: 2.3rem;
+  width: 24px;
+  height: 24px;
 }
-
+@media (max-width: 375px) {
+  .header-button {
+    margin-left: 22px;
+  }
+}
 @media (max-width: 768px) {
   .header-burger {
     display: block;
@@ -504,28 +480,20 @@ h2 {
     cursor: pointer;
   }
 }
-
 .header-mobile-menu {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  -webkit-transition: 0.8s -webkit-transform;
-  transition: 0.8s -webkit-transform;
+  transform: translateY(-100%);
   transition: 0.8s transform;
-  transition: 0.8s transform, 0.8s -webkit-transform;
   width: 100%;
   padding: 80px 25px 43px 30px;
   background-color: #fff;
 }
-
 .header-mobile-menu.open {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
-
 .header-mobile-menu-btn-close {
   position: absolute;
   top: 23px;
@@ -534,170 +502,139 @@ h2 {
   border: none;
   cursor: pointer;
 }
-
 .header-mobile-menu-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   text-transform: uppercase;
 }
-
 .header-mobile-menu-link {
   margin-bottom: 30px;
 }
 
 .product {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 30px;
+  justify-content: space-between;
+  margin-bottom: 2.14rem;
 }
-
 @media (max-width: 768px) {
   .product {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     margin-bottom: 4.14rem;
   }
 }
-
+@media (max-width: 375px) {
+  .product {
+    margin-bottom: 3.07rem;
+  }
+}
 .product-title {
   letter-spacing: 0;
   margin-bottom: 0.57rem;
 }
-
 .product-slider {
   position: relative;
   width: calc(50% - 8px);
 }
-
 @media (max-width: 768px) {
   .product-slider {
     width: auto;
     margin: 0 -20px 24px;
   }
 }
-
+@media (max-width: 375px) {
+  .product-slider {
+    margin: 0 -20px 3px;
+  }
+}
 .product-info {
   padding-top: 0.92rem;
   width: calc(50% - 28px);
 }
-
 @media (max-width: 768px) {
   .product-info {
     width: 100%;
   }
 }
-
 .product-main-slider img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
-
 .product-thumbnail-slider {
   position: absolute;
   top: 26px;
   left: 24px;
   z-index: 1;
 }
-
+@media (max-width: 375px) {
+  .product-thumbnail-slider {
+    top: 30px;
+  }
+}
 .product-thumbnail-slider .splide__slide {
   border: none !important;
 }
-
 .product-code {
   font-size: 0.8571rem;
   color: #828282;
   margin-bottom: 1.14rem;
 }
-
 .product-reviews {
   position: relative;
   margin-bottom: 3.07rem;
 }
-
 .product-reviews-title {
   margin-right: 0.9286rem;
 }
-
 .product-reviews-rating {
   margin-right: 0.3571rem;
 }
-
 .product-reviews:after {
-  content: url("/images/product-arrow.svg");
+  content: url("images/product-arrow.svg");
   margin-top: 0.07rem;
   margin-left: 0.35rem;
 }
-
 .product-price {
   margin-bottom: 1.07rem;
 }
-
 .product-price-current {
   font-weight: 700;
   font-size: 1.7143rem;
   margin-right: 0.8571rem;
 }
-
 .product-price-prev {
   text-decoration: line-through;
 }
-
 .product-price:after {
-  content: url("/images/product-arrow.svg");
+  content: url("images/product-arrow.svg");
   margin-top: 0.21rem;
   margin-left: 1.42rem;
 }
-
 .product-discount {
   font-size: 0.85rem;
   margin-bottom: 2.35rem;
 }
-
 .product-discount-item {
   padding: 4px 7px 2px;
   margin-right: 0.35rem;
   border: 1px solid #333333;
 }
-
 .product-discount-item:last-child {
   margin-right: 0;
 }
-
 .product-size {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 .product-size-choose {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   max-width: 315px;
   width: 100%;
   padding: 0.92rem 1.14rem;
-  background: transparent url("../images/product-arrow-down.svg") no-repeat calc(100% - 10px) center;
+  background: transparent url("images/product-arrow-down.svg") no-repeat calc(100% - 10px) center;
   margin-bottom: 0.85rem;
   cursor: pointer;
 }
-
 .product-size-link {
   margin-bottom: 2.92rem;
   display: inline-block;
@@ -705,13 +642,11 @@ h2 {
   line-height: 0.95;
   border-bottom: 1px solid #828282;
 }
-
 .product-add-to-cart {
   position: relative;
   margin-bottom: 1.92rem;
   padding-bottom: 2.07rem;
 }
-
 .product-add-to-cart:after {
   content: "";
   position: absolute;
@@ -720,56 +655,52 @@ h2 {
   left: -20px;
   border: 0.5px solid #C4C4C4;
 }
-
 @media (max-width: 768px) {
   .product-add-to-cart:after {
     width: auto;
     right: -20px;
   }
 }
-
-.product-form {
-  margin-bottom: 0.85rem;
-}
-
 @media (max-width: 915px) {
   .product-form {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: end;
+    flex-direction: column;
   }
 }
-
-@media (max-width: 915px) {
-  .product-form-box {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
 .product-form-buttons {
   height: 44px;
   margin-right: 0.85rem;
 }
-
 @media (max-width: 915px) {
   .product-form-buttons {
     margin-bottom: 1.07rem;
   }
 }
-
+@media (max-width: 375px) {
+  .product-form-buttons {
+    margin-bottom: 1.14rem;
+  }
+}
+.product-form-box {
+  margin-bottom: 0.85rem;
+}
+@media (max-width: 915px) {
+  .product-form-box {
+    align-items: end;
+  }
+}
+@media (max-width: 375px) {
+  .product-form-box {
+    margin-bottom: 1.5rem;
+  }
+}
 .product-btn-submit {
   margin-right: 0.28rem;
 }
-
 @media (max-width: 768px) {
   .product-btn-submit {
     height: 44px;
   }
 }
-
 .product-btn-quantity {
   width: 44px;
   height: 100%;
@@ -777,7 +708,6 @@ h2 {
   border: none;
   cursor: pointer;
 }
-
 .product-btn-count {
   min-width: 57px;
   height: 100%;
@@ -786,252 +716,286 @@ h2 {
   vertical-align: middle;
   line-height: 44px;
 }
-
 .product-buy {
   display: inline-block;
   vertical-align: baseline;
   line-height: 0.95;
   border-bottom: 1px solid #828282;
 }
-
 .product-favourites {
   width: 44px;
   height: 44px;
   padding: 1.07rem;
   background-color: #333333;
 }
-
 .product-favourites:hover {
   background-color: #0f0e0e;
 }
-
 .product-links-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 1.21rem;
   margin-left: 0.21rem;
 }
-
 .product-links-image {
   width: 15px;
   height: 15px;
   margin-right: 0.42rem;
 }
-
 .product-links-text {
   display: inline-block;
   vertical-align: baseline;
   line-height: 0.95;
   border-bottom: 1px solid #828282;
 }
+.product-message {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 40px 60px;
+  max-width: 80%;
+  max-height: 80%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  font-size: 1.2rem;
+}
+@media (max-width: 425px) {
+  .product-message {
+    width: 100%;
+  }
+}
+.product-message.open {
+  display: block;
+}
 
 .gallery {
   margin-bottom: 108px;
 }
-
 @media (max-width: 768px) {
   .gallery {
     margin-bottom: 42px;
   }
 }
-
+@media (max-width: 375px) {
+  .gallery {
+    margin-bottom: 14px;
+  }
+}
 .gallery-link-box {
   text-align: center;
   margin-bottom: 1.78rem;
 }
-
 @media (max-width: 768px) {
   .gallery-link-box {
     margin-bottom: 4.14rem;
   }
 }
-
 .gallery-link {
   display: inline-block;
   vertical-align: baseline;
   line-height: 0.95;
   border-bottom: 1px solid #828282;
 }
-
 .gallery .columns {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 @media (max-width: 768px) {
   .gallery .columns {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
-
 .gallery .column {
   width: calc(50% - 8px);
 }
-
 @media (max-width: 768px) {
   .gallery .column {
     width: auto;
     margin: 0 -20px;
   }
 }
-
 .gallery .column-4 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-
 .gallery .column-4 .gallery-box {
   width: calc(50% - 8px);
   margin-bottom: 16px;
 }
-
-.gallery-box {
-  display: block;
+@media (max-width: 375px) {
+  .gallery .column-4 .gallery-box {
+    width: calc(50% - 5px);
+    margin-bottom: 9px;
+  }
 }
-
+.gallery-box {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.gallery-box:hover .gallery-info {
+  transform: none;
+}
 .gallery-box-image {
   display: block;
   max-width: 100%;
 }
-
 @media (max-width: 768px) {
   .gallery-box-image {
     width: 100%;
   }
 }
-
 @media (max-width: 768px) {
   .gallery-box-lg {
     margin-bottom: 1.07rem;
   }
 }
+@media (max-width: 375px) {
+  .gallery-box-lg {
+    margin-bottom: 8px;
+  }
+}
+.gallery-info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  padding: 16px 16px 20px;
+  background: rgba(51, 51, 51, 0.8);
+  transform: translateY(100%);
+  transition: 0.5s transform;
+}
+.gallery-info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+.gallery-info-top-icon {
+  align-self: end;
+}
+.gallery-info-main-icon {
+  text-align: center;
+}
+.gallery-info-like-icon {
+  margin-bottom: -4px;
+}
 
 .footer {
   padding: 20px 0 70px;
 }
-
 .footer-columns {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
-
 @media (max-width: 768px) {
   .footer-columns {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
-
 .footer-column {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: calc(50% - 8px);
 }
-
 @media (max-width: 768px) {
   .footer-column {
-    margin-bottom: 4.14rem;
+    width: 80%;
+    margin: 0 auto 4.14rem;
   }
 }
-
-.footer-column-left {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+@media (max-width: 425px) {
+  .footer-column {
+    width: 100%;
+  }
 }
-
+.footer-column-left {
+  justify-content: space-around;
+}
 @media (max-width: 768px) {
   .footer-column-left {
+    justify-content: space-between;
     margin-bottom: 3.57rem;
   }
 }
-
 @media (max-width: 425px) {
   .footer-column-left {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    justify-content: start;
   }
 }
-
-.footer-column-right {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@media (max-width: 375px) {
+  .footer-column-left {
+    margin-bottom: 60px;
+  }
 }
-
+.footer-column-right {
+  justify-content: center;
+}
 .footer-title {
   margin-top: 0;
   margin-bottom: 18px;
 }
-
 .footer-item {
   margin-bottom: 0.57rem;
 }
-
 .footer-item:last-child {
   margin-bottom: 0;
 }
-
 .footer-item-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   min-width: 110px;
 }
-
 @media (max-width: 425px) {
   .footer-item-box {
     width: 50%;
   }
 }
-
+@media (max-width: 375px) {
+  .footer-item-box {
+    margin-right: 10px;
+  }
+  .footer-item-box:last-child {
+    margin-right: 0;
+  }
+}
 .footer-subscribe {
   width: 100%;
   max-width: 452px;
 }
-
+@media (max-width: 768px) {
+  .footer-subscribe {
+    max-width: 100%;
+  }
+}
 .footer-subscribe-title {
   margin-top: 0;
   margin-bottom: 37px;
   letter-spacing: 0.1px;
 }
-
 @media (max-width: 425px) {
   .footer-subscribe-title {
     width: 60%;
   }
 }
-
+@media (max-width: 375px) {
+  .footer-subscribe-title {
+    margin-bottom: 28px;
+  }
+}
 @media (max-width: 320px) {
   .footer-subscribe-title {
     width: 100%;
   }
 }
-
 .footer-subscribe-email {
   width: 100%;
   border: none;
@@ -1040,7 +1004,13 @@ h2 {
   margin-bottom: 2.5rem;
   outline: none;
 }
-
+@media (max-width: 375px) {
+  .footer-subscribe-email {
+    padding: 11px 16px;
+    letter-spacing: 0.5px;
+    margin-bottom: 26px;
+  }
+}
 .footer-subscribe-btn-cross {
   position: absolute;
   right: 2px;
@@ -1050,13 +1020,18 @@ h2 {
   border: none;
   cursor: pointer;
 }
-
+@media (max-width: 375px) {
+  .footer-subscribe-btn-cross {
+    right: 7px;
+    top: 5px;
+  }
+}
 .footer-subscribe .form {
   position: relative;
 }
-
 .footer-subscribe .button {
   display: block;
   margin-left: auto;
 }
+
 /*# sourceMappingURL=styles.css.map */

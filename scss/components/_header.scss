@@ -1,6 +1,5 @@
 .header {
     position: absolute;
-    //position: fixed;
     left: 0;
     right: 0;
     z-index: 2;
@@ -13,6 +12,10 @@
         box-shadow: none;
         margin-bottom: 0;
         padding: 22px 0 28px;
+    }
+
+    @include media-to(375px) {
+        padding: 22px 0;
     }
 
     &-box {
@@ -36,6 +39,12 @@
 
     &-button {
         margin-left: 2.3rem;
+        width: 24px;
+        height: 24px;
+
+        @include media-to(375px) {
+            margin-left: 22px;
+        }
     }
 
     &-burger {

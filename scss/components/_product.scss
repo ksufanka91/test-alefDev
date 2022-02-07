@@ -1,11 +1,15 @@
 .product {
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 2.14rem;
 
     @include media-to(768px) {
         display: flex;
         flex-direction: column;
         margin-bottom: 4.14rem;
+    }
+
+    @include media-to(375px) {
+        margin-bottom: 3.07rem;
     }
 
     &-title {
@@ -20,6 +24,10 @@
         @include media-to(768px) {
             width: auto;
             margin: 0 -20px 24px;
+        }
+
+        @include media-to(375px) {
+            margin: 0 -20px 3px;
         }
     }
 
@@ -46,6 +54,10 @@
         left: 24px;
         z-index: 1;
 
+        @include media-to(375px) {
+            top: 30px;
+        }
+
         .splide__slide {
             border: none !important;
         }
@@ -70,7 +82,7 @@
         }
 
         &:after {
-            content: url("/images/product-arrow.svg");
+            content: url("images/product-arrow.svg");
             margin-top: 0.07rem;
             margin-left: 0.35rem;
         }
@@ -90,7 +102,7 @@
         }
 
         &:after {
-            content: url("/images/product-arrow.svg");
+            content: url("images/product-arrow.svg");
             margin-top: 0.21rem;
             margin-left: 1.42rem;
         }
@@ -120,7 +132,7 @@
             max-width: 315px;
             width: 100%;
             padding: 0.92rem 1.14rem;
-            background: transparent url("../images/product-arrow-down.svg") no-repeat calc(100% - 10px) center;
+            background: transparent url("images/product-arrow-down.svg") no-repeat calc(100% - 10px) center;
             margin-bottom: 0.85rem;
             cursor: pointer;
         }
@@ -155,17 +167,8 @@
     }
 
     &-form {
-        margin-bottom: 0.85rem;
-
         @include media-to(915px) {
-            align-items: end;
-        }
-
-
-        &-box {
-            @include media-to(915px) {
-                flex-direction: column;
-            }
+            flex-direction: column;
         }
 
         &-buttons {
@@ -175,8 +178,25 @@
             @include media-to(915px) {
                 margin-bottom: 1.07rem;
             }
+
+            @include media-to(375px) {
+                margin-bottom: 1.14rem;
+            }
+        }
+
+        &-box {
+            margin-bottom: 0.85rem;
+
+            @include media-to(915px) {
+                align-items: end;
+            }
+
+            @include media-to(375px) {
+                margin-bottom: 1.5rem;
+            }
         }
     }
+
 
     &-btn-submit {
         margin-right: 0.28rem;
@@ -239,6 +259,30 @@
             vertical-align: baseline;
             line-height: 0.95;
             border-bottom: 1px solid $color-light;
+        }
+    }
+
+    &-message {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        padding: 40px 60px;
+        max-width: 80%;
+        max-height: 80%;
+        transform: translate(-50%, -50%);
+        background: #ffffff;
+        text-align: center;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        z-index: 2;
+        font-size: 1.2rem;
+
+        @include media-to(425px) {
+            width: 100%;
+        }
+
+        &.open {
+            display: block;
         }
     }
 }

@@ -15,24 +15,33 @@
         width: calc(50% - 8px);
 
         @include media-to(768px) {
-            margin-bottom: 4.14rem;
+            width: 80%;
+            margin: 0 auto 4.14rem;
+        }
+
+        @include media-to(425px) {
+            width: 100%;
         }
 
         &-left {
             justify-content: space-around;
 
             @include media-to(768px) {
+                justify-content: space-between;
                 margin-bottom: 3.57rem;
             }
 
             @include media-to(425px) {
                 justify-content: start;
             }
+
+            @include media-to(375px) {
+                margin-bottom: 60px;
+            }
         }
 
         &-right {
             justify-content: center;
-
         }
     }
 
@@ -56,12 +65,24 @@
             @include media-to(425px) {
                 width: 50%;
             }
+
+            @include media-to(375px) {
+                margin-right: 10px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
         }
     }
 
     &-subscribe {
         width: 100%;
         max-width: 452px;
+
+        @include media-to(768px) {
+            max-width: 100%;
+        }
 
         &-title {
             margin-top: 0;
@@ -70,6 +91,10 @@
 
             @include media-to(425px) {
                 width: 60%;
+            }
+
+            @include media-to(375px) {
+                margin-bottom: 28px;
             }
 
             @include media-to(320px) {
@@ -84,6 +109,12 @@
             border-bottom: 1px solid #c4c4c4;
             margin-bottom: 2.5rem;
             outline: none;
+
+            @include media-to(375px) {
+                padding: 11px 16px;
+                letter-spacing: 0.5px;
+                margin-bottom: 26px;
+            }
         }
 
         &-btn-cross {
@@ -94,6 +125,11 @@
             background-color: transparent;
             border: none;
             cursor: pointer;
+
+            @include media-to(375px) {
+                right: 7px;
+                top: 5px;
+            }
         }
 
         .form {
