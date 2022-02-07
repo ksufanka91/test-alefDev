@@ -687,7 +687,7 @@ h2 {
 }
 @media (max-width: 915px) {
   .product-form-box {
-    align-items: end;
+    align-items: flex-end;
   }
 }
 @media (max-width: 375px) {

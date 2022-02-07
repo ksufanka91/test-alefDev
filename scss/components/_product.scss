@@ -190,7 +190,7 @@
             margin-bottom: 0.85rem;
 
             @include media-to(915px) {
-                align-items: end;
+                align-items: flex-end;
             }
 
             @include media-to(375px) {
