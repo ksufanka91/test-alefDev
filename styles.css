@@ -635,8 +635,6 @@ h2 {
   background: transparent url("images/product-arrow-down.svg") no-repeat calc(100% - 10px) center;
   margin-bottom: 0.85rem;
   cursor: pointer;
-}
-.product-size-choose-option {
   color: #333333;
 }
 .product-size-link {

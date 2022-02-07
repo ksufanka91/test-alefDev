@@ -136,11 +136,7 @@
             background: transparent url("images/product-arrow-down.svg") no-repeat calc(100% - 10px) center;
             margin-bottom: 0.85rem;
             cursor: pointer;
-
-            &-option {
-                color: $color-brand;
-            }
-
+            color: $color-brand;
         }
 
         &-link {
